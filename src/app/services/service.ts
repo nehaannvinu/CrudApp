@@ -1,5 +1,5 @@
-import { IUser } from './model';
-import users from './schema';
+import { IUser } from '../../utils/constants';
+import users from '../models/user.model';
 
 export default class UserService {
     

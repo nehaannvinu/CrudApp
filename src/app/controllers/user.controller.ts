@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import { insufficientParameters, mongoError, successResponse, failureResponse } from '../utils/common/service';
-import { IUser } from '../utils/user/model';
-import UserService from '../utils/user/service';
+import { IUser } from '../utils/constants'
+import UserService from '../services/user.service';
 
-import { successMessage, failureMessage} from "../utils/common/constants"
+import { successMessage, failureMessage} from "../utils/constants"
 
 export class UserController {
 

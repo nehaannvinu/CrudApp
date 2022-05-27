@@ -1,5 +1,5 @@
 import { Application, Request, Response } from 'express';
-import { responseMessage } from 'app/utils/common/constants';
+import { responseMessage } from 'app/utils/constants';
 export class CommonRoutes {
     public route(app: Application) {
 

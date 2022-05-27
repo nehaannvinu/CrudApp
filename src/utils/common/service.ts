@@ -1,6 +1,6 @@
 import { Response } from 'express';
 import { response_status_codes } from './model';
-import { responseMessage } from './constants';
+import { responseMessage } from '../constants';
 
 export function successResponse(message: string, DATA: any, res: Response) {
     res.status(response_status_codes.success).json({
