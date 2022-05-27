@@ -1,0 +1,22 @@
+//Typescript config file
+
+//We do development using typescript but since we 
+//run it on Node.js we need to convert it to javascript. 
+
+
+{
+    "compilerOptions": {
+       "module": "commonjs",
+       "moduleResolution": "node",
+       "pretty": true,
+       "target": "es6",
+       "outDir": "./dist", //js files here
+       "baseUrl": "./src" //ts files here
+    },
+    "include": [
+       "src/**/*.ts"
+, "server.ts"    ],
+    "exclude": [
+       "node_modules"
+    ]
+ }
