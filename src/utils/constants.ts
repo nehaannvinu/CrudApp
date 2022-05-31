@@ -19,13 +19,23 @@ export const responseMessage = {
 }
 
 export interface IUser {
-    _id?: String;
+    _id?: string;
+    username: string,
     name: {
-        first_name: String;
-        middle_name: String;
-        last_name: String;
+        first_name: string;
+        middle_name: string;
+        last_name: string;
     };
-    email: String;
-    phone_number: String;
-    gender: String;
+    email: string;
+    phone_number: string;
+    gender: string;
+    modification_details: {
+        created_on: Date,
+        modified_on: Date
+    }
+}
+
+export interface ModificationDetails {
+    created_on: Date,
+    modified_on: Date;
 }
