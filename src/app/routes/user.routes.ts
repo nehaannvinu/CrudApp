@@ -1,5 +1,5 @@
 import { Application, Request, Response } from 'express';
-import { UserController } from '../controllers/userController';
+import { UserController } from '../controllers/user.controller';
 
 export class UserRoutes {
 
@@ -8,23 +8,27 @@ export class UserRoutes {
     public route(app: Application) {
         
         app.post('/api/user', (req: Request, res: Response) => {
-            this.user_controller.create_user(req, res);
+            this.user_controller.createUser(req, res);
         });
 
         app.get('/api/user',(req: Request, res: Response) => {
-            this.user_controller.get_all_users(req, res);
+            this.user_controller.getUsers(req, res);
         })
 
+        // app.get('/api/user/:username',(req: Request, res: Response) => {
+        //     this.user_controller.getUserByName(req, res);
+        // })
+
         app.get('/api/user/:id', (req: Request, res: Response) => {
-            this.user_controller.get_user(req, res);
+            this.user_controller.getUser(req, res);
         });
 
         app.put('/api/user/:id', (req: Request, res: Response) => {
-            this.user_controller.update_user(req, res);
+            this.user_controller.updateUser(req, res);
         });
 
         app.delete('/api/user/:id', (req: Request, res: Response) => {
-            this.user_controller.delete_user(req, res);
+            this.user_controller.deleteUser(req, res);
         });
 
     }

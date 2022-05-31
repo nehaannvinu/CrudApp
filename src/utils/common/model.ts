@@ -3,3 +3,8 @@ export enum response_status_codes {
     bad_request = 400,
     internal_server_error = 500
 }
+
+export const ModificationDetails = {
+    created_on: Date,
+    modified_on: Date
+}

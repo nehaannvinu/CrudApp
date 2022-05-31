@@ -3,7 +3,7 @@ import * as bodyParser from "body-parser";
 import * as mongoose from 'mongoose';
 import environment from "../environment";
 import { UserRoutes } from "../app/routes/user.routes";
-import { CommonRoutes } from "../app/routes/common_routes";
+import { CommonRoutes } from "../utils/common/routes";
 
 class App {
 
