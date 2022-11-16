@@ -2,34 +2,34 @@ import { Response } from 'express';
 import { response_status_codes } from './model';
 import { responseMessage } from '../constants';
 
-export function successResponse(message: string, Data: any, res: Response) {
+export function successResponse(message: string, data: any, res: Response) {
     res.status(response_status_codes.success).json({
-        Status: responseMessage.success,
-        Message: message,
-        Data
+        status: responseMessage.success,
+        message: message,
+        data
     });
 }
 
-export function failureResponse(message: string, Data: any, res: Response) {
+export function failureResponse(message: string, data: any, res: Response) {
     res.status(response_status_codes.success).json({
-        Status: responseMessage.failure,
-        Message: message,
-        Data
+        status: responseMessage.failure,
+        message: message,
+        data
     });
 }
 
 export function insufficientParameters(res: Response) {
     res.status(response_status_codes.bad_request).json({
-        Status: responseMessage.failure,
-        Message: responseMessage.insufficientParams,
-        Data: {}
+        status: responseMessage.failure,
+        message: responseMessage.insufficientParams,
+        data: {}
     });
 }
 
 export function mongoError(err: any, res: Response) {
     res.status(response_status_codes.internal_server_error).json({
-        Status: responseMessage.failure,
-        Message: responseMessage.mongoerror,
-        Data: err
+        status: responseMessage.failure,
+        message: responseMessage.mongoerror,
+        data: err
     });
 }
