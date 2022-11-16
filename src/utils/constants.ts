@@ -3,7 +3,11 @@ export const successMessage= {
     userDisplaySuccess: 'All Users',
     fetchUserSuccess: 'User details fetched',
     deleteUserSuccess: 'User deleted!',
-    userUpdateSuccess: 'User details updated'
+    userUpdateSuccess: 'User details updated',
+    taskAdded: 'Task Added',
+    fetchAllTask: 'Fetched all tasks',
+    updatedTask: 'Updated tasks',
+    deletedTask: 'Deleted task'
 }
 
 export const failureMessage = {
@@ -19,13 +23,34 @@ export const responseMessage = {
 }
 
 export interface IUser {
-    _id?: String;
+    _id?: string;
+    username: string,
     name: {
-        first_name: String;
-        middle_name: String;
-        last_name: String;
+        first_name: string;
+        middle_name: string;
+        last_name: string;
     };
-    email: String;
-    phone_number: String;
-    gender: String;
+    email: string;
+    phone_number: string;
+    gender: string;
+    modification_details: {
+        created_on: Date,
+        modified_on: Date
+    }
+}
+
+export interface ITodo {
+    _id?: string,
+    title: string,
+    status: boolean,
+    modificationDetails: {
+        created_on: Date,
+        modified_on: Date
+    }
+    priority: number
+}
+
+export interface ModificationDetails {
+    created_on: Date,
+    modified_on: Date;
 }
